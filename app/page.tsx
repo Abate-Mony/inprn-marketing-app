@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { CheckCircle, Clock, Calendar, Users, FileText, Receipt, BarChart2, ArrowRight, Shield, Zap, Globe, ChevronRight } from "lucide-react";
-import { TIMESHIFT_SIGNUP_URL } from "@/lib/timeshift";
+import { SIGNUP_URL } from "@/lib/appUrls";
 
 export const metadata: Metadata = {
-  title: "work.wrk — Workforce management without the paperwork",
+  title: "INPRN — Workforce management without the paperwork",
   description:
     "Schedule shifts, verify attendance with geofenced GPS, manage timesheets and invoice clients from one place — built for security, cleaning, events and other shift-based operational teams.",
 };
@@ -41,7 +41,7 @@ function DashboardMockup() {
         </div>
         <div className="flex-1 mx-6 h-6 bg-[#0F172A]/70 rounded-md flex items-center justify-center gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/40" />
-          <span className="text-[11px] text-slate-400 font-medium">app.work.wrk</span>
+          <span className="text-[11px] text-slate-400 font-medium">timeshift.inprn.com</span>
         </div>
         <div className="w-16 shrink-0" />
       </div>
@@ -60,7 +60,7 @@ function DashboardMockup() {
                 <rect x="6" y="6" width="4" height="4" rx="1" fill="white" opacity="0.3" />
               </svg>
             </div>
-            <span className="text-xs font-bold text-white">work.wrk</span>
+            <span className="text-xs font-bold text-white">INPRN</span>
           </div>
 
           {[
@@ -253,7 +253,7 @@ function HeroSection() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
           <a
-            href={TIMESHIFT_SIGNUP_URL}
+            href={SIGNUP_URL}
             className="h-12 px-7 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/92 active:scale-[0.98] transition-all shadow-lg shadow-black/30 inline-flex items-center gap-2"
           >
             Get started free
@@ -336,7 +336,7 @@ function FeaturesSection() {
           <SectionLabel>Features</SectionLabel>
           <SectionHeading>Everything you need to run your team</SectionHeading>
           <p className="text-slate-500 mt-4 max-w-xl mx-auto leading-relaxed">
-            From scheduling to approval — work.wrk handles the operational detail so you can focus on the work.
+            From scheduling to approval — INPRN handles the operational detail so you can focus on the work.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -376,7 +376,7 @@ function HowItWorksSection() {
           <SectionLabel>How it works</SectionLabel>
           <SectionHeading>Up and running in under an hour</SectionHeading>
           <p className="text-slate-500 mt-4 max-w-md mx-auto leading-relaxed">
-            work.wrk is designed to be operational quickly — no lengthy implementations, no consultant needed.
+            INPRN is designed to be operational quickly — no lengthy implementations, no consultant needed.
           </p>
         </div>
         <div className="relative">
@@ -424,7 +424,7 @@ function ForManagersSection() {
               Total control.
             </SectionHeading>
             <p className="text-slate-500 mt-5 mb-8 leading-relaxed">
-              work.wrk gives operations managers the live view they need — without chasing workers for updates or building spreadsheets manually.
+              INPRN gives operations managers the live view they need — without chasing workers for updates or building spreadsheets manually.
             </p>
             <div className="flex flex-col gap-4">
               {points.map((p) => (
@@ -489,7 +489,7 @@ function ForWorkersSection() {
           <div className="order-2 lg:order-1 rounded-2xl bg-white border border-slate-200 shadow-lg overflow-hidden" aria-hidden="true">
             {/* Phone mockup style */}
             <div className="bg-[#1E3A5F] px-5 pt-6 pb-5">
-              <p className="text-xs text-white/50 mb-3">work.wrk · Worker App</p>
+              <p className="text-xs text-white/50 mb-3">INPRN · Worker App</p>
               <div className="bg-white/10 rounded-xl p-4">
                 <p className="text-xs font-semibold text-white mb-0.5">Next shift</p>
                 <p className="text-base font-bold text-white">Canary Wharf Security</p>
@@ -600,11 +600,11 @@ function CTASection() {
           Ready to manage your workforce the right way?
         </h2>
         <p className="text-lg text-white/45 mb-10 leading-relaxed">
-          Join teams already using work.wrk to schedule, track and pay their workforce — without the spreadsheets.
+          Join teams already using INPRN to schedule, track and pay their workforce — without the spreadsheets.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={TIMESHIFT_SIGNUP_URL}
+            href={SIGNUP_URL}
             className="h-12 px-8 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 active:scale-[0.98] transition-all inline-flex items-center gap-2 shadow-lg shadow-black/20"
           >
             Create your free account

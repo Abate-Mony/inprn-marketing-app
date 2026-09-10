@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { TIMESHIFT_LOGIN_URL, TIMESHIFT_SIGNUP_URL } from "@/lib/timeshift";
+import { LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
 
 const links = [
   { label: "Features", href: "/features" },
@@ -37,7 +37,7 @@ export function MarketingHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[66px]">
-        <Link href="/" aria-label="work.wrk home">
+        <Link href="/" aria-label="INPRN home">
           <Logo light={isHero} />
         </Link>
 
@@ -66,7 +66,8 @@ export function MarketingHeader() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href={TIMESHIFT_LOGIN_URL}
+            href={LOGIN_URL}
+            target="_blank"
             className={`text-sm font-medium transition-colors ${
               isHero ? "text-white/75 hover:text-white" : "text-slate-600 hover:text-slate-900"
             }`}
@@ -74,7 +75,8 @@ export function MarketingHeader() {
             Sign in
           </a>
           <a
-            href={TIMESHIFT_SIGNUP_URL}
+            href={SIGNUP_URL}
+            target="_blank"
             className={`h-9 px-5 rounded-xl text-sm font-semibold transition-all active:scale-[0.98] inline-flex items-center ${
               isHero
                 ? "bg-white text-[#0B1628] hover:bg-white/90 shadow-lg shadow-black/20"
@@ -116,14 +118,14 @@ export function MarketingHeader() {
           ))}
           <div className="flex flex-col gap-2 pt-3">
             <a
-              href={TIMESHIFT_LOGIN_URL}
+              href={LOGIN_URL}
               onClick={closeMobileMenu}
               className="h-10 flex items-center justify-center text-sm font-medium text-slate-600 border border-slate-200 rounded-xl hover:bg-slate-50"
             >
               Sign in
             </a>
             <a
-              href={TIMESHIFT_SIGNUP_URL}
+              href={SIGNUP_URL}
               onClick={closeMobileMenu}
               className="h-10 flex items-center justify-center text-sm font-semibold text-white bg-[#1E3A5F] rounded-xl hover:bg-[#162D4A]"
             >

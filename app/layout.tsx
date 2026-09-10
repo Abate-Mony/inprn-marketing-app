@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "work.wrk — Workforce management without the paperwork",
-    template: "%s | work.wrk",
+    default: "INPRN — Workforce management without the paperwork",
+    template: "%s | INPRN",
   },
   description:
     "Schedule shifts, verify attendance with geofenced GPS, manage timesheets and invoice clients from one place — built for security, cleaning, events and other shift-based operational teams.",

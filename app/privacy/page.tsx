@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How work.wrk collects, uses, shares and protects your personal data.",
+  description: "How INPRN collects, uses, shares and protects your personal data.",
 };
 
 const SECTIONS = [
@@ -85,17 +85,17 @@ export default function PrivacyPage() {
           <main className="lg:col-span-3">
             <DocSection id="overview" title="1. Overview">
               <P>
-                work.wrk (&quot;<strong className="text-slate-800">work.wrk</strong>&quot;, &quot;<strong className="text-slate-800">we</strong>
+                INPRN (&quot;<strong className="text-slate-800">INPRN</strong>&quot;, &quot;<strong className="text-slate-800">we</strong>
                 &quot;, &quot;<strong className="text-slate-800">us</strong>&quot; or &quot;<strong className="text-slate-800">our</strong>&quot;)
                 is a workforce management and timesheet platform operated by <Placeholder>Company Legal Name</Placeholder>, registered at{" "}
                 <Placeholder>registered address</Placeholder>.
               </P>
               <P>
-                This Privacy Policy explains what personal data work.wrk collects, why we collect it, how we use it and your rights in relation to
-                it. It applies to all users of the work.wrk platform — including managers, administrators and workers.
+                This Privacy Policy explains what personal data INPRN collects, why we collect it, how we use it and your rights in relation to
+                it. It applies to all users of the INPRN platform — including managers, administrators and workers.
               </P>
               <P>
-                By using work.wrk you agree to the collection and use of your data as described in this policy. If you do not agree, please do not
+                By using INPRN you agree to the collection and use of your data as described in this policy. If you do not agree, please do not
                 use the platform.
               </P>
             </DocSection>
@@ -133,12 +133,12 @@ export default function PrivacyPage() {
             </DocSection>
 
             <DocSection id="google" title="3. Google sign-in">
-              <P>work.wrk offers &quot;Sign in with Google&quot; as an alternative to email and password login. When you choose to sign in with Google:</P>
+              <P>INPRN offers &quot;Sign in with Google&quot; as an alternative to email and password login. When you choose to sign in with Google:</P>
               <UL
                 items={[
                   "We receive your Google account's name, email address and profile picture from Google's identity service.",
                   "We do not receive access to your Google Drive, Gmail, Calendar or any other Google services.",
-                  "We use this information only to create and authenticate your work.wrk account.",
+                  "We use this information only to create and authenticate your INPRN account.",
                   "We do not sell, rent or share your Google account data with third parties for advertising or marketing purposes.",
                 ]}
               />
@@ -240,7 +240,7 @@ export default function PrivacyPage() {
             </DocSection>
 
             <DocSection id="cookies" title="9. Cookies">
-              <P>work.wrk uses cookies and similar technologies to:</P>
+              <P>INPRN uses cookies and similar technologies to:</P>
               <UL items={["Maintain your login session", "Remember your preferences", "Measure how the platform is used (analytics)"]} />
               <P>You can control cookies through your browser settings. Disabling cookies may affect your ability to log in or use certain features.</P>
               <P>We do not use cookies for third-party advertising.</P>

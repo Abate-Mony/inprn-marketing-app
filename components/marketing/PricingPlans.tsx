@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Check } from "lucide-react";
-import { TIMESHIFT_SIGNUP_URL } from "@/lib/timeshift";
+import { SIGNUP_URL } from "@/lib/appUrls";
 
 type Billing = "monthly" | "annual";
 
@@ -30,7 +30,7 @@ const PLANS: Plan[] = [
     annualPrice: 0,
     annualMonthly: 0,
     ctaLabel: "Continue free",
-    href: TIMESHIFT_SIGNUP_URL,
+    href: SIGNUP_URL,
     features: ["Up to 5 workers", "Up to 10 jobs per month", "Clock-in / clock-out", "Basic digital timesheets", "CSV export", "Email support"],
     notIncluded: ["GPS verification", "Recurring jobs", "Advanced reports"],
   },
@@ -42,7 +42,7 @@ const PLANS: Plan[] = [
     annualPrice: 468,
     annualMonthly: 39,
     ctaLabel: "Get started",
-    href: TIMESHIFT_SIGNUP_URL,
+    href: SIGNUP_URL,
     highlighted: true,
     features: [
       "Unlimited workers",

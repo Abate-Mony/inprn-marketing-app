@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 
-const SUPPORT_EMAIL = "support@work.wrk";
+const SUPPORT_EMAIL = "support@inprn.com";
 
 export function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -15,7 +15,7 @@ export function ContactForm() {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
 
-    const subject = form.subject || "Contact from work.wrk website";
+    const subject = form.subject || "Contact from INPRN website";
     const body = `Name: ${form.name}\nEmail: ${form.email}${form.subject ? `\nTopic: ${form.subject}` : ""}\n\n${form.message}`;
     window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 

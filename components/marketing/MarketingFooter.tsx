@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { TIMESHIFT_LOGIN_URL, TIMESHIFT_SIGNUP_URL } from "@/lib/timeshift";
+import { LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
 
 const columns = [
   {
@@ -15,8 +15,8 @@ const columns = [
     title: "Company",
     items: [
       { label: "Contact & Support", href: "/contact" },
-      { label: "Sign in", href: TIMESHIFT_LOGIN_URL },
-      { label: "Get started", href: TIMESHIFT_SIGNUP_URL },
+      { label: "Sign in", href: LOGIN_URL },
+      { label: "Get started", href: SIGNUP_URL },
     ],
   },
   {
@@ -42,7 +42,7 @@ export function MarketingFooter() {
             <p className="text-sm text-white/45 leading-relaxed mt-4 max-w-xs">
               Workforce management, timesheets and client invoicing for security, cleaning, events and other shift-based operational teams.
             </p>
-            <p className="text-xs text-white/25 mt-6">© 2026 work.wrk. All rights reserved.</p>
+            <p className="text-xs text-white/25 mt-6">© 2026 INPRN. All rights reserved.</p>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
@@ -73,7 +73,7 @@ export function MarketingFooter() {
         </div>
         <div className="mt-12 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/25">
-            work.wrk is a workforce management platform. Not affiliated with any other service.
+            INPRN is a workforce management platform. Not affiliated with any other service.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-xs text-white/30 hover:text-white/60 transition-colors">

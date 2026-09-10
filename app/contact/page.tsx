@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/marketing/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact & Support",
-  description: "Got a question about work.wrk, a feature request, or a technical problem? Send us a message and we'll get back to you.",
+  description: "Got a question about INPRN, a feature request, or a technical problem? Send us a message and we'll get back to you.",
 };
 
 const infoCards = [
@@ -12,8 +12,8 @@ const infoCards = [
     icon: <Mail size={18} />,
     title: "Email support",
     desc: "For general enquiries, onboarding help and account issues.",
-    value: "support@work.wrk",
-    href: "mailto:support@work.wrk",
+    value: "support@inprn.com",
+    href: "mailto:support@inprn.com",
   },
   {
     icon: <Clock size={18} />,
@@ -40,7 +40,7 @@ export default function ContactPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-5">Contact & Support</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-5">We&apos;re here to help</h1>
           <p className="text-lg text-white/45 leading-relaxed">
-            Got a question about work.wrk, a feature request, or a technical problem? Send us a message and we&apos;ll get back to you.
+            Got a question about INPRN, a feature request, or a technical problem? Send us a message and we&apos;ll get back to you.
           </p>
         </div>
       </section>
@@ -80,9 +80,9 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-xl font-bold text-slate-900 mb-3">Privacy &amp; Google account enquiries</h2>
           <p className="text-slate-500 leading-relaxed text-sm max-w-xl mx-auto">
-            For questions about how work.wrk uses Google account information, data deletion requests, or any privacy concern, please email{" "}
-            <a href="mailto:privacy@work.wrk" className="text-[#1E3A5F] font-semibold hover:underline">
-              privacy@work.wrk
+            For questions about how INPRN uses Google account information, data deletion requests, or any privacy concern, please email{" "}
+            <a href="mailto:privacy@inprn.com" className="text-[#1E3A5F] font-semibold hover:underline">
+              privacy@inprn.com
             </a>
             . We respond to all privacy requests within 30 days.
           </p>

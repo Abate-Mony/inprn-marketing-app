@@ -4,7 +4,7 @@ import { PricingPlans } from "@/components/marketing/PricingPlans";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Simple, transparent pricing for work.wrk — a free Starter plan, a Growth plan for growing teams, and custom Enterprise pricing.",
+  description: "Simple, transparent pricing for INPRN — a free Starter plan, a Growth plan for growing teams, and custom Enterprise pricing.",
 };
 
 const faqs = [
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Do I need to enter payment details to get started?",
-    a: "No. You can create an account on the Starter plan and explore work.wrk without a credit card.",
+    a: "No. You can create an account on the Starter plan and explore INPRN without a credit card.",
   },
   {
     q: "How does upgrading to Growth or Enterprise work?",
@@ -25,7 +25,7 @@ const faqs = [
     a: "Enterprise plans include bulk data import. On other plans, you can add workers and jobs manually or contact support for help.",
   },
   {
-    q: "What happens to my data if I stop using work.wrk?",
+    q: "What happens to my data if I stop using INPRN?",
     a: "You can export all your data at any time. On request, we will delete your account and associated records. See our Privacy Policy for details.",
   },
 ];

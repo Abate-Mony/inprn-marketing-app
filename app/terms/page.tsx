@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms that govern your use of the work.wrk platform.",
+  description: "The terms that govern your use of the INPRN platform.",
 };
 
 function P({ children }: { children: React.ReactNode }) {
@@ -67,18 +67,18 @@ export default function TermsPage() {
           <main className="lg:col-span-3">
             <DocSection id="acceptance" title="1. Acceptance of terms">
               <P>
-                By accessing or using the work.wrk platform (the &quot;<strong className="text-slate-800">Service</strong>&quot;), you agree to be
+                By accessing or using the INPRN platform (the &quot;<strong className="text-slate-800">Service</strong>&quot;), you agree to be
                 bound by these Terms of Service. If you do not agree, do not use the Service.
               </P>
               <P>
-                The Service is operated by <PH>Company Legal Name</PH> (&quot;<strong className="text-slate-800">work.wrk</strong>&quot;). These
-                Terms constitute a legal agreement between you and work.wrk.
+                The Service is operated by <PH>Company Legal Name</PH> (&quot;<strong className="text-slate-800">INPRN</strong>&quot;). These
+                Terms constitute a legal agreement between you and INPRN.
               </P>
             </DocSection>
 
             <DocSection id="service" title="2. Description of service">
               <P>
-                work.wrk is a workforce management platform that enables companies and their managers to schedule shifts, track attendance, manage
+                INPRN is a workforce management platform that enables companies and their managers to schedule shifts, track attendance, manage
                 timesheets and coordinate their workforce. Workers use the Service to view schedules, clock in and out and manage their own
                 records.
               </P>
@@ -117,7 +117,7 @@ export default function TermsPage() {
 
             <DocSection id="data" title="5. Your data">
               <P>
-                You retain ownership of the data you submit to the Service. By submitting data, you grant work.wrk a limited licence to store and
+                You retain ownership of the data you submit to the Service. By submitting data, you grant INPRN a limited licence to store and
                 process that data in order to provide the Service.
               </P>
               <P>You may export your data at any time. On account deletion, your data will be handled as described in our Privacy Policy.</P>
@@ -129,14 +129,14 @@ export default function TermsPage() {
                 changes or discontinue features with reasonable notice where possible.
               </P>
               <P>
-                The Service is provided &quot;as is&quot;. work.wrk makes no warranties, express or implied, about the Service&apos;s fitness for a
+                The Service is provided &quot;as is&quot;. INPRN makes no warranties, express or implied, about the Service&apos;s fitness for a
                 particular purpose.
               </P>
             </DocSection>
 
             <DocSection id="liability" title="7. Limitation of liability">
               <P>
-                To the maximum extent permitted by law, work.wrk shall not be liable for any indirect, incidental, special or consequential damages
+                To the maximum extent permitted by law, INPRN shall not be liable for any indirect, incidental, special or consequential damages
                 arising out of your use of the Service, including loss of data, lost revenue or reputational harm.
               </P>
               <P>

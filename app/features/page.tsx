@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
-import { TIMESHIFT_SIGNUP_URL } from "@/lib/timeshift";
+import { SIGNUP_URL } from "@/lib/appUrls";
 
 export const metadata: Metadata = {
   title: "Features",
@@ -31,11 +31,11 @@ function PageHero() {
           A complete toolkit for workforce operations
         </h1>
         <p className="text-lg text-white/45 mb-10 leading-relaxed max-w-xl mx-auto">
-          work.wrk covers every step from scheduling a shift to invoicing the client — scheduling, attendance, timesheets, billing and reporting in
+          INPRN covers every step from scheduling a shift to invoicing the client — scheduling, attendance, timesheets, billing and reporting in
           one place.
         </p>
         <a
-          href={TIMESHIFT_SIGNUP_URL}
+          href={SIGNUP_URL}
           className="h-11 px-7 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center gap-2"
         >
           Get started free <ArrowRight size={15} />
@@ -65,7 +65,7 @@ const featureSections = [
     title: "Recurring Jobs & Open Shifts",
     badge: "Automation",
     headline: "Stop rebuilding the same shift every week",
-    desc: "Set up a recurring job once — daily, weekly or monthly — and work.wrk generates every future occurrence automatically. If a shift is left unassigned, qualifying workers can pick it up themselves as an open shift, with optional manager approval before it's confirmed.",
+    desc: "Set up a recurring job once — daily, weekly or monthly — and INPRN generates every future occurrence automatically. If a shift is left unassigned, qualifying workers can pick it up themselves as an open shift, with optional manager approval before it's confirmed.",
     bullets: [
       "Daily, weekly or monthly recurrence patterns",
       "Bulk-accept upcoming recurring shifts from the mobile app",
@@ -402,9 +402,9 @@ export default function FeaturesPage() {
       <section className="py-20 bg-[#080F1C] text-center">
         <div className="max-w-xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-4">Start free, upgrade when you need to</h2>
-          <p className="text-white/45 mb-8">Starter is free for teams of up to 5 workers. Get started today and see what work.wrk can do for your team.</p>
+          <p className="text-white/45 mb-8">Starter is free for teams of up to 5 workers. Get started today and see what INPRN can do for your team.</p>
           <a
-            href={TIMESHIFT_SIGNUP_URL}
+            href={SIGNUP_URL}
             className="h-11 px-7 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center"
           >
             Create your free account
