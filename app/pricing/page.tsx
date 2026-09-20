@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PricingPlans } from "@/components/marketing/PricingPlans";
+import { getPlanCatalog } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -30,7 +31,9 @@ const faqs = [
   },
 ];
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const plans = await getPlanCatalog();
+
   return (
     <>
       {/* Hero */}
@@ -47,7 +50,7 @@ export default function PricingPage() {
       {/* Plans */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6">
-          <PricingPlans />
+          <PricingPlans plans={plans} />
         </div>
       </section>
 

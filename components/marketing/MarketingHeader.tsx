@@ -10,6 +10,7 @@ import { LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
 const links = [
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Docs", href: "/docs" },
   { label: "Contact", href: "/contact" },
 ];
 

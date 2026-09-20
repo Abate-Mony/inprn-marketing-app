@@ -4,85 +4,40 @@ import { useState } from "react";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { SIGNUP_URL } from "@/lib/appUrls";
+import type { PlanCatalogEntry } from "@/lib/api";
 
 type Billing = "monthly" | "annual";
 
-interface Plan {
-  id: "starter" | "growth" | "enterprise";
-  name: string;
-  tagline: string;
-  monthlyPrice: number | null;
-  annualPrice: number | null;
-  annualMonthly: number | null;
-  ctaLabel: string;
-  href: string;
-  highlighted?: boolean;
-  features: string[];
-  notIncluded?: string[];
-}
-
-const PLANS: Plan[] = [
-  {
-    id: "starter",
-    name: "Starter",
-    tagline: "For small teams getting started",
-    monthlyPrice: 0,
-    annualPrice: 0,
-    annualMonthly: 0,
-    ctaLabel: "Continue free",
-    href: SIGNUP_URL,
-    features: ["Up to 5 workers", "Up to 10 jobs per month", "Clock-in / clock-out", "Basic digital timesheets", "CSV export", "Email support"],
-    notIncluded: ["GPS verification", "Recurring jobs", "Advanced reports"],
-  },
-  {
-    id: "growth",
-    name: "Growth",
-    tagline: "For growing operational teams",
-    monthlyPrice: 49,
-    annualPrice: 468,
-    annualMonthly: 39,
-    ctaLabel: "Get started",
-    href: SIGNUP_URL,
-    highlighted: true,
-    features: [
-      "Unlimited workers",
-      "Unlimited jobs",
-      "GPS clock-in verification",
-      "Recurring job templates",
-      "Manager approval workflows",
-      "Advanced reports & analytics",
-      "Location management",
-      "Priority support",
-    ],
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    tagline: "For large organisations",
-    monthlyPrice: null,
-    annualPrice: null,
-    annualMonthly: null,
-    ctaLabel: "Contact sales",
-    href: "/contact",
-    features: [
-      "Everything in Growth",
-      "Multi-site management",
-      "Google Workspace / SSO",
-      "Dedicated account manager",
-      "Custom integrations",
-      "Audit logs",
-      "SLA guarantee",
-      "Bulk data import",
-    ],
-  },
-];
-
-function getPrice(plan: Plan, billing: Billing): number | null {
+function getPrice(plan: PlanCatalogEntry, billing: Billing): number | null {
   return billing === "annual" ? plan.annualMonthly : plan.monthlyPrice;
 }
 
-export function PricingPlans() {
+function planHref(plan: PlanCatalogEntry): string {
+  return plan.monthlyPrice === null ? "/contact" : SIGNUP_URL;
+}
+
+interface PricingPlansProps {
+  // Fetched server-side in pricing/page.tsx from the backend's public
+  // GET /plans endpoint — null means that fetch failed (backend down/
+  // unreachable), which we surface as a message rather than silently
+  // falling back to stale hardcoded numbers.
+  plans: PlanCatalogEntry[] | null;
+}
+
+export function PricingPlans({ plans }: PricingPlansProps) {
   const [billing, setBilling] = useState<Billing>("monthly");
+
+  if (!plans) {
+    return (
+      <p className="text-center text-slate-500 py-12">
+        Couldn&apos;t load pricing right now — please try refreshing, or{" "}
+        <Link href="/contact" className="text-[#1E3A5F] font-semibold underline">
+          contact us
+        </Link>{" "}
+        for plan details.
+      </p>
+    );
+  }
 
   return (
     <div>
@@ -113,17 +68,18 @@ export function PricingPlans() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {PLANS.map((plan) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {plans.map((plan) => {
           const price = getPrice(plan, billing);
-          const isExternal = plan.href.startsWith("http");
+          const href = planHref(plan);
+          const isExternal = href.startsWith("http");
           const ctaClass = `w-full h-11 rounded-xl text-sm font-semibold transition-all inline-flex items-center justify-center ${
             plan.highlighted ? "bg-white text-[#1E3A5F] hover:bg-white/90" : "border border-slate-200 text-slate-700 hover:bg-slate-50"
           }`;
 
           return (
             <div
-              key={plan.name}
+              key={plan.id}
               className={`relative rounded-2xl p-7 flex flex-col ${
                 plan.highlighted ? "bg-[#1E3A5F] text-white ring-2 ring-[#1E3A5F]" : "bg-white border border-slate-200"
               }`}
@@ -181,11 +137,11 @@ export function PricingPlans() {
               </div>
 
               {isExternal ? (
-                <a href={plan.href} className={ctaClass}>
+                <a href={href} className={ctaClass}>
                   {plan.ctaLabel}
                 </a>
               ) : (
-                <Link href={plan.href} className={ctaClass}>
+                <Link href={href} className={ctaClass}>
                   {plan.ctaLabel}
                 </Link>
               )}
