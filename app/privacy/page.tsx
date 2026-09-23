@@ -44,11 +44,11 @@ function UL({ items }: { items: string[] }) {
   );
 }
 
-function Placeholder({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="bg-amber-50 border border-amber-200 text-amber-800 px-2 py-0.5 rounded text-[13px] font-medium">[{children}]</span>
-  );
-}
+// function Placeholder({ children }: { children: React.ReactNode }) {
+//   return (
+//     <span className="bg-amber-50 border border-amber-200 text-amber-800 px-2 py-0.5 rounded text-[13px] font-medium">[{children}]</span>
+//   );
+// }
 
 export default function PrivacyPage() {
   return (
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
           <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
           <p className="text-white/45">
-            Last updated: <Placeholder>DATE</Placeholder>
+            Last updated: 24/09/2026
           </p>
         </div>
       </section>
@@ -87,8 +87,8 @@ export default function PrivacyPage() {
               <P>
                 INPRN (&quot;<strong className="text-slate-800">INPRN</strong>&quot;, &quot;<strong className="text-slate-800">we</strong>
                 &quot;, &quot;<strong className="text-slate-800">us</strong>&quot; or &quot;<strong className="text-slate-800">our</strong>&quot;)
-                is a workforce management and timesheet platform operated by <Placeholder>Company Legal Name</Placeholder>, registered at{" "}
-                <Placeholder>registered address</Placeholder>.
+                is a workforce management and timesheet platform operated by <a href="www.innoprosolution.com">InnoProsolutions</a>, registered at{" "}
+               Kensington Way
               </P>
               <P>
                 This Privacy Policy explains what personal data INPRN collects, why we collect it, how we use it and your rights in relation to
@@ -156,7 +156,7 @@ export default function PrivacyPage() {
               </P>
               <P>
                 You may disconnect Google sign-in at any time by visiting your account settings or by contacting{" "}
-                <Placeholder>support email</Placeholder>.
+               support@inprn.com.
               </P>
             </DocSection>
 
@@ -194,15 +194,15 @@ export default function PrivacyPage() {
             <DocSection id="retention" title="6. Retention and deletion">
               <P>
                 We retain your personal data for as long as your account is active or as needed to provide the service. Work records (timesheets,
-                clock-in data) are retained for <Placeholder>retention period, e.g. 7 years</Placeholder> to comply with employment and tax
+                clock-in data) are retained for retention period, e.g. 7 years to comply with employment and tax
                 record-keeping obligations.
               </P>
               <P>
-                When you delete your account, we will delete or anonymise your personal data within <Placeholder>e.g. 30 days</Placeholder>, except
+                When you delete your account, we will delete or anonymise your personal data within e.g. 30 days, except
                 where we are required to retain records by law.
               </P>
               <P>
-                To request account deletion, email <Placeholder>deletion request email</Placeholder> or use the account settings page.
+                To request account deletion, email deletion request email or use the account settings page.
               </P>
             </DocSection>
 
@@ -218,7 +218,7 @@ export default function PrivacyPage() {
               />
               <P>
                 No system is completely secure. If you suspect unauthorised access to your account, please contact us immediately at{" "}
-                <Placeholder>security contact email</Placeholder>.
+                security@inprn.com.
               </P>
             </DocSection>
 
@@ -235,7 +235,7 @@ export default function PrivacyPage() {
                 ]}
               />
               <P>
-                To exercise any of these rights, contact us at <Placeholder>privacy@yourdomain.com</Placeholder>. We will respond within 30 days.
+                To exercise any of these rights, contact us at privacy@inprn.com. We will respond within 30 days.
               </P>
             </DocSection>
 
@@ -250,13 +250,13 @@ export default function PrivacyPage() {
               <P>For any privacy-related questions, requests or concerns, please contact us:</P>
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 text-sm text-slate-600 flex flex-col gap-2">
                 <p>
-                  <strong className="text-slate-800">Email:</strong> <Placeholder>privacy@yourdomain.com</Placeholder>
+                  <strong className="text-slate-800">Email:</strong> mail@yourdomain.com
                 </p>
                 <p>
-                  <strong className="text-slate-800">Company:</strong> <Placeholder>Company Legal Name</Placeholder>
+                  <strong className="text-slate-800">Company:</strong> InPerson 
                 </p>
                 <p>
-                  <strong className="text-slate-800">Address:</strong> <Placeholder>Registered address</Placeholder>
+                  <strong className="text-slate-800">Address:</strong> Kensington Way Chippenham
                 </p>
               </div>
               <P>If you are not satisfied with our response, you may have the right to complain to your local data protection authority.</P>
