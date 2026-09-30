@@ -38,7 +38,7 @@ export function MarketingHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[66px]">
-        <Link href="/" aria-label="INPRN home">
+        <Link href="/" aria-label="OnClockly home">
           <Logo light={isHero} />
         </Link>
 

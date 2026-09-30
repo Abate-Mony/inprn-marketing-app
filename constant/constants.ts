@@ -1,0 +1,1 @@
+export const dashboard_app_url='https://app.onclockly.com'

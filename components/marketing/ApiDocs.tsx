@@ -158,7 +158,7 @@ export function ApiDocs() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Developer docs</p>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-4">External API</h1>
           <p className="text-white/45 leading-relaxed max-w-xl mx-auto">
-            Connect your own systems — a booking website, a Zapier flow, an internal tool — to your INPRN schedule.
+            Connect your own systems — a booking website, a Zapier flow, an internal tool — to your OnClockly schedule.
             Authenticated by an API key, scoped to your company automatically.
           </p>
         </div>
@@ -209,15 +209,15 @@ export function ApiDocs() {
             <strong className="text-slate-900">Safety rule that applies to every write this API can do:</strong> a job
             created through this API always comes in as a <code className="font-mono text-[12.5px]">draft</code>. It&apos;s
             never published, never assigned a worker, and never visible in a worker&apos;s app until a manager reviews and
-            publishes it inside INPRN.
+            publishes it inside OnClockly.
           </div>
 
           <section id="overview" className="scroll-mt-24 mb-12">
             <h2 className="text-xl font-bold text-slate-900 mb-3">Getting a key</h2>
             <p className="text-slate-600 leading-relaxed max-w-2xl">
-              In the INPRN app: <strong className="text-slate-900">Settings → API Keys → New key.</strong> Only the
+              In the OnClockly app: <strong className="text-slate-900">Settings → API Keys → New key.</strong> Only the
               company owner can create or revoke keys. The raw key is shown exactly once, right after creation — copy it
-              somewhere safe immediately. INPRN only ever stores a hash of it, so if you lose it, the only fix is to
+              somewhere safe immediately. OnClockly only ever stores a hash of it, so if you lose it, the only fix is to
               revoke it and create a new one.
             </p>
           </section>
@@ -263,7 +263,7 @@ export function ApiDocs() {
 
           <section id="sites" className="scroll-mt-24 mb-12">
             <EndpointHeading method="GET" path="/sites" />
-            <p className="text-slate-600 leading-relaxed max-w-2xl mb-1">A client&apos;s saved locations, if they have any set up in INPRN.</p>
+            <p className="text-slate-600 leading-relaxed max-w-2xl mb-1">A client&apos;s saved locations, if they have any set up in OnClockly.</p>
             <ParamsTable rows={[{ name: "clientId", required: true, note: "A real, active client id from /clients." }]} />
             <CodeBlock label="200 · application/json">{`{
   "success": true,
@@ -308,7 +308,7 @@ export function ApiDocs() {
             <p className="text-slate-500 text-sm leading-relaxed">
               <code className="font-mono text-[12px]">externalReference</code> echoes back whatever you sent when
               creating the job via this API — <code className="font-mono text-[12px]">null</code> for jobs created
-              inside INPRN itself. This endpoint never returns worker names, contact details, or pay rates.
+              inside OnClockly itself. This endpoint never returns worker names, contact details, or pay rates.
             </p>
           </section>
 
@@ -418,7 +418,7 @@ export function ApiDocs() {
 const inprn = axios.create({
   baseURL: "https://<your-inprn-api-host>/api/v1/external",
   headers: {
-    Authorization: \`Bearer \${process.env.INPRN_API_KEY}\`,
+    Authorization: \`Bearer \${process.env.OnClockly_API_KEY}\`,
   },
 });
 
@@ -475,7 +475,7 @@ export async function requestBooking(booking) {
                 { t: "Resolve your client id.", d: "Call GET /clients?search=<name> once at setup time — or hardcode it if your integration only ever books for one client." },
                 { t: "Optionally list saved sites.", d: "GET /sites?clientId=... if you want to let the booker pick a saved site rather than typing an address." },
                 { t: "Create the draft.", d: "When a booking comes in on your site, POST /jobs with your own externalReference for reconciliation." },
-                { t: "Wait for publish.", d: "A manager reviews and publishes the draft inside INPRN. Poll GET /schedule and match on externalReference if you want to reflect status back to your own users." },
+                { t: "Wait for publish.", d: "A manager reviews and publishes the draft inside OnClockly. Poll GET /schedule and match on externalReference if you want to reflect status back to your own users." },
               ].map((step, i) => (
                 <li key={step.t} className="flex gap-4">
                   <span className="w-7 h-7 rounded-full bg-[#1E3A5F] text-white text-xs font-mono font-bold flex items-center justify-center shrink-0">
