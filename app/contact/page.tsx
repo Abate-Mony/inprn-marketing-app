@@ -12,8 +12,8 @@ const infoCards = [
     icon: <Mail size={18} />,
     title: "Email support",
     desc: "For general enquiries, onboarding help and account issues.",
-    value: "support@inprn.com",
-    href: "mailto:support@inprn.com",
+    value: "support@onclockly.com",
+    href: "mailto:support@onclockly.com",
   },
   {
     icon: <Clock size={18} />,
@@ -81,8 +81,8 @@ export default function ContactPage() {
           <h2 className="text-xl font-bold text-slate-900 mb-3">Privacy &amp; Google account enquiries</h2>
           <p className="text-slate-500 leading-relaxed text-sm max-w-xl mx-auto">
             For questions about how OnClockly uses Google account information, data deletion requests, or any privacy concern, please email{" "}
-            <a href="mailto:privacy@inprn.com" className="text-[#1E3A5F] font-semibold hover:underline">
-              privacy@inprn.com
+            <a href="mailto:privacy@onclockly.com" className="text-[#1E3A5F] font-semibold hover:underline">
+              privacy@onclockly.com
             </a>
             . We respond to all privacy requests within 30 days.
           </p>

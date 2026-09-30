@@ -235,7 +235,7 @@ export function ApiDocs() {
 
           <section id="basics" className="scroll-mt-24 mb-12">
             <h2 className="text-xl font-bold text-slate-900 mb-3">Base URL &amp; rate limit</h2>
-            <CodeBlock label="Base URL">{`https://<your-inprn-api-host>/api/v1/external`}</CodeBlock>
+            <CodeBlock label="Base URL">{`https://api.onclockly.com/api/v1/external`}</CodeBlock>
             <p className="text-slate-500 text-sm leading-relaxed">
               <strong className="text-slate-700">300 requests</strong> per 15 minutes, per key. Beyond that you&apos;ll
               get a <code className="font-mono text-[12px]">429</code>.
@@ -413,7 +413,7 @@ export function ApiDocs() {
               The key only ever needs to go in the <code className="font-mono text-[12.5px]">Authorization</code> header
               — set it once on an axios instance and every call inherits it.
             </p>
-            <CodeBlock label="inprn-client.js">{`import axios from "axios";
+            <CodeBlock label="onclockly-client.js">{`import axios from "axios";
 
 const inprn = axios.create({
   baseURL: "https://<your-inprn-api-host>/api/v1/external",
