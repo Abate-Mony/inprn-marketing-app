@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 
-const SUPPORT_EMAIL = "support@inprn.com";
+const SUPPORT_EMAIL = "support@onclockly.com";
 
 export function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });

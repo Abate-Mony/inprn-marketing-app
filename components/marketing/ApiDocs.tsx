@@ -415,34 +415,34 @@ export function ApiDocs() {
             </p>
             <CodeBlock label="onclockly-client.js">{`import axios from "axios";
 
-const inprn = axios.create({
-  baseURL: "https://<your-inprn-api-host>/api/v1/external",
+const onclockly = axios.create({
+  baseURL: "https://<your-onclockly-api-host>/api/v1/external",
   headers: {
-    Authorization: \`Bearer \${process.env.OnClockly_API_KEY}\`,
+    Authorization: \`Bearer \${process.env.ONCLOCKLY_API_KEY}\`,
   },
 });
 
 // GET /clients?search=
 export async function findClient(name) {
-  const { data } = await inprn.get("/clients", { params: { search: name } });
+  const { data } = await onclockly.get("/clients", { params: { search: name } });
   return data.clients[0] ?? null;
 }
 
 // GET /sites?clientId=
 export async function getSitesForClient(clientId) {
-  const { data } = await inprn.get("/sites", { params: { clientId } });
+  const { data } = await onclockly.get("/sites", { params: { clientId } });
   return data.sites;
 }
 
 // GET /schedule?dateFrom=&dateTo=
 export async function getSchedule(dateFrom, dateTo) {
-  const { data } = await inprn.get("/schedule", { params: { dateFrom, dateTo } });
+  const { data } = await onclockly.get("/schedule", { params: { dateFrom, dateTo } });
   return data.jobs;
 }
 
 // POST /jobs — always comes back as status: "draft"
 export async function requestBooking(booking) {
-  const { data } = await inprn.post("/jobs", {
+  const { data } = await onclockly.post("/jobs", {
     clientId: booking.clientId,
     siteId: booking.siteId,
     title: booking.title,

@@ -156,7 +156,7 @@ export default function PrivacyPage() {
               </P>
               <P>
                 You may disconnect Google sign-in at any time by visiting your account settings or by contacting{" "}
-               support@inprn.com.
+               support@onclockly.com.
               </P>
             </DocSection>
 
@@ -218,7 +218,7 @@ export default function PrivacyPage() {
               />
               <P>
                 No system is completely secure. If you suspect unauthorised access to your account, please contact us immediately at{" "}
-                security@inprn.com.
+                security@onclockly.com.
               </P>
             </DocSection>
 
@@ -235,7 +235,7 @@ export default function PrivacyPage() {
                 ]}
               />
               <P>
-                To exercise any of these rights, contact us at privacy@inprn.com. We will respond within 30 days.
+                To exercise any of these rights, contact us at privacy@onclockly.com. We will respond within 30 days.
               </P>
             </DocSection>
 
