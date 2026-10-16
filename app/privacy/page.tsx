@@ -194,15 +194,18 @@ export default function PrivacyPage() {
             <DocSection id="retention" title="6. Retention and deletion">
               <P>
                 We retain your personal data for as long as your account is active or as needed to provide the service. Work records (timesheets,
-                clock-in data) are retained for retention period, e.g. 7 years to comply with employment and tax
-                record-keeping obligations.
+                clock-in data) may be retained for longer where needed to comply with employment and tax record-keeping obligations.
               </P>
               <P>
-                When you delete your account, we will delete or anonymise your personal data within e.g. 30 days, except
-                where we are required to retain records by law.
+                When your data is deleted, we remove or anonymise it except where we are required to retain records by law.
               </P>
               <P>
-                To request account deletion, email deletion request email or use the account settings page.
+                <strong className="text-slate-800">Workers:</strong> open the OnClockly app, go to Profile, and select &quot;Request Account
+                Deletion&quot;. This notifies your company&apos;s admin, who will action the request.
+              </P>
+              <P>
+                <strong className="text-slate-800">Company admins/owners</strong> wanting their company&apos;s account and data deleted should
+                email us at info@onclockly.com.
               </P>
             </DocSection>
 
