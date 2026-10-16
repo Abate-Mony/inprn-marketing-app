@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   },
   description:
     "Schedule shifts, verify attendance with geofenced GPS, manage timesheets and invoice clients from one place — built for security, cleaning, events and other shift-based operational teams.",
+      verification: {
+    google: "5cd871aaeeb43b6d",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
