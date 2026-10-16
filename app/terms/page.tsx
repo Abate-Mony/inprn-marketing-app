@@ -18,12 +18,6 @@ function DocSection({ id, title, children }: { id: string; title: string; childr
   );
 }
 
-function PH({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="bg-amber-50 border border-amber-200 text-amber-800 px-2 py-0.5 rounded text-[13px] font-medium">[{children}]</span>
-  );
-}
-
 const SECTIONS = [
   { id: "acceptance", title: "1. Acceptance of terms" },
   { id: "service", title: "2. Description of service" },
@@ -44,7 +38,7 @@ export default function TermsPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
           <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
           <p className="text-white/45">
-            Last updated: <PH>DATE</PH>
+            Last updated: 16 October 2026
           </p>
         </div>
       </section>
@@ -71,8 +65,8 @@ export default function TermsPage() {
                 bound by these Terms of Service. If you do not agree, do not use the Service.
               </P>
               <P>
-                The Service is operated by <PH>Company Legal Name</PH> (&quot;<strong className="text-slate-800">OnClockly</strong>&quot;). These
-                Terms constitute a legal agreement between you and OnClockly.
+                The Service is operated by <strong className="text-slate-800">OnClockly</strong>. These Terms constitute a legal agreement between
+                you and OnClockly.
               </P>
             </DocSection>
 
@@ -90,8 +84,8 @@ export default function TermsPage() {
                 for all activity that occurs under your account.
               </P>
               <P>
-                Accounts may not be shared between individuals. Each user must have their own account. You must be at least{" "}
-                <PH>minimum age, e.g. 16</PH> years old to use the Service.
+                Accounts may not be shared between individuals. Each user must have their own account. You must meet the minimum age required by
+                applicable law in your jurisdiction to use the Service.
               </P>
               <P>You must provide accurate, current and complete information when creating your account and keep it up to date.</P>
             </DocSection>
@@ -156,13 +150,10 @@ export default function TermsPage() {
               <P>If you have questions about these Terms, contact us at:</P>
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 text-sm text-slate-600 flex flex-col gap-2">
                 <p>
-                  <strong className="text-slate-800">Email:</strong> <PH>legal@yourdomain.com</PH>
+                  <strong className="text-slate-800">Email:</strong> info@onclockly.com
                 </p>
                 <p>
-                  <strong className="text-slate-800">Company:</strong> <PH>Company Legal Name</PH>
-                </p>
-                <p>
-                  <strong className="text-slate-800">Address:</strong> <PH>Registered address</PH>
+                  <strong className="text-slate-800">Company:</strong> OnClockly
                 </p>
               </div>
             </DocSection>
