@@ -13,6 +13,9 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+/*
+<meta name="google-site-verification" content="1Q1lRwr4gzPogaBLvpKd5mJg2M8q7odFoJ3EKaLlQNQ" />
+*/
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Schedule shifts, verify attendance with geofenced GPS, manage timesheets and invoice clients from one place — built for security, cleaning, events and other shift-based operational teams.",
       verification: {
-    google: "5cd871aaeeb43b6d",
+    google: "1Q1lRwr4gzPogaBLvpKd5mJg2M8q7odFoJ3EKaLlQNQ",
   },
 };
 
