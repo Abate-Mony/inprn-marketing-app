@@ -58,9 +58,7 @@ export default function PrivacyPage() {
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
           <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-          <p className="text-white/45">
-            Last updated: 24/09/2026
-          </p>
+          <p className="text-white/45">Last updated: 29 October 2026</p>
         </div>
       </section>
 
@@ -87,8 +85,7 @@ export default function PrivacyPage() {
               <P>
                 OnClockly (&quot;<strong className="text-slate-800">OnClockly</strong>&quot;, &quot;<strong className="text-slate-800">we</strong>
                 &quot;, &quot;<strong className="text-slate-800">us</strong>&quot; or &quot;<strong className="text-slate-800">our</strong>&quot;)
-                is a workforce management and timesheet platform operated by <a href="www.innoprosolution.com">InnoProsolutions</a>, registered at{" "}
-               Kensington Way
+                is a workforce management and timesheet platform operated by <a href="https://www.innoprosolution.com" target="_blank" rel="noopener noreferrer">InnoProsolutions Ltd</a>, registered at Kensington Way, Chippenham, SN15 3JZ, United Kingdom.
               </P>
               <P>
                 This Privacy Policy explains what personal data OnClockly collects, why we collect it, how we use it and your rights in relation to
@@ -156,7 +153,7 @@ export default function PrivacyPage() {
               </P>
               <P>
                 You may disconnect Google sign-in at any time by visiting your account settings or by contacting{" "}
-               support@onclockly.com.
+                support@onclockly.com.
               </P>
             </DocSection>
 
@@ -253,13 +250,13 @@ export default function PrivacyPage() {
               <P>For any privacy-related questions, requests or concerns, please contact us:</P>
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 text-sm text-slate-600 flex flex-col gap-2">
                 <p>
-                  <strong className="text-slate-800">Email:</strong> mail@yourdomain.com
+                  <strong className="text-slate-800">Email:</strong> privacy@onclockly.com
                 </p>
                 <p>
-                  <strong className="text-slate-800">Company:</strong> InPerson 
+                  <strong className="text-slate-800">Company:</strong> InnoProsolutions Ltd
                 </p>
                 <p>
-                  <strong className="text-slate-800">Address:</strong> Kensington Way Chippenham
+                  <strong className="text-slate-800">Address:</strong> Kensington Way, Chippenham, SN15 3JZ, United Kingdom
                 </p>
               </div>
               <P>If you are not satisfied with our response, you may have the right to complain to your local data protection authority.</P>
@@ -270,3 +267,4 @@ export default function PrivacyPage() {
     </>
   );
 }
+

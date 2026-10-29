@@ -37,9 +37,7 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
           <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-          <p className="text-white/45">
-            Last updated: 16 October 2026
-          </p>
+          <p className="text-white/45">Last updated: 29 October 2026</p>
         </div>
       </section>
 
@@ -65,7 +63,7 @@ export default function TermsPage() {
                 bound by these Terms of Service. If you do not agree, do not use the Service.
               </P>
               <P>
-                The Service is operated by <strong className="text-slate-800">OnClockly</strong>. These Terms constitute a legal agreement between
+                The Service is operated by <strong className="text-slate-800">InnoProsolutions Ltd</strong> (&quot;OnClockly&quot;). These Terms constitute a legal agreement between
                 you and OnClockly.
               </P>
             </DocSection>
@@ -153,7 +151,10 @@ export default function TermsPage() {
                   <strong className="text-slate-800">Email:</strong> info@onclockly.com
                 </p>
                 <p>
-                  <strong className="text-slate-800">Company:</strong> OnClockly
+                  <strong className="text-slate-800">Company:</strong> InnoProsolutions Ltd
+                </p>
+                <p>
+                  <strong className="text-slate-800">Address:</strong> Kensington Way, Chippenham, SN15 3JZ, United Kingdom
                 </p>
               </div>
             </DocSection>
@@ -163,3 +164,4 @@ export default function TermsPage() {
     </>
   );
 }
+

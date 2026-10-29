@@ -10,7 +10,7 @@ export function Logo({ light }: { light?: boolean }) {
         </svg>
       </div>
       <span className={`text-[17px] font-bold tracking-tight ${light ? "text-white" : "text-slate-900"}`}>
-        work<span className={light ? "text-white/50" : "text-slate-400"}>.wrk</span>
+        OnClockly
       </span>
     </div>
   );
