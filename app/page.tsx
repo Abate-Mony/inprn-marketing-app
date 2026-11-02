@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CheckCircle, Clock, Calendar, Users, FileText, Receipt, BarChart2, ArrowRight, Shield, Zap, Globe, ChevronRight } from "lucide-react";
+import { CheckCircle, Clock, Calendar, Users, FileText, Receipt, BarChart2, ArrowRight, Shield, Zap, Globe, ChevronRight, Smartphone, Bell } from "lucide-react";
 import { SIGNUP_URL } from "@/lib/appUrls";
 import { dashboard_app_url } from "@/constant/constants";
 
@@ -327,6 +327,11 @@ const features = [
     title: "Reports & Export",
     desc: "Payroll, timesheet, performance and profitability reports — see which clients and jobs are actually worth it.",
   },
+  {
+    icon: <Smartphone size={20} />,
+    title: "Client Portal",
+    desc: "Give clients their own app to review bookings, approve quotes and pay invoices — no more chasing emails back and forth.",
+  },
 ];
 
 function FeaturesSection() {
@@ -549,6 +554,79 @@ function ForWorkersSection() {
   );
 }
 
+function ForClientsSection() {
+  const points = [
+    "Review a new quote and accept or decline it right from their phone.",
+    "See every booking — upcoming, in progress or completed — with live status updates.",
+    "Request a new booking, or a reschedule, without a single phone call.",
+    "View and pay invoices as soon as they're sent, with a clear record of what's due.",
+    "Get an instant notification the moment a booking's approved, a visit's starting soon, or a new invoice lands.",
+  ];
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <SectionLabel>For clients</SectionLabel>
+            <SectionHeading>
+              A better experience
+              <br />
+              for the people you serve.
+            </SectionHeading>
+            <p className="text-slate-500 mt-5 mb-8 leading-relaxed">
+              Your clients get their own branded portal and mobile app — so every booking, quote and invoice lives in
+              one place instead of scattered across email threads.
+            </p>
+            <div className="flex flex-col gap-4">
+              {points.map((p) => (
+                <div key={p} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-[#1E3A5F]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle size={12} className="text-[#1E3A5F]" />
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">{p}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Visual */}
+          <div className="rounded-2xl bg-white border border-slate-200 shadow-lg overflow-hidden" aria-hidden="true">
+            {/* Phone mockup style */}
+            <div className="bg-[#1E3A5F] px-5 pt-6 pb-5">
+              <p className="text-xs text-white/50 mb-3">OnClockly · Client Portal</p>
+              <div className="bg-white/10 rounded-xl p-4 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-emerald-400/20 flex items-center justify-center shrink-0 mt-0.5">
+                  <Bell size={14} className="text-emerald-300" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-white mb-0.5">Booking approved</p>
+                  <p className="text-xs text-white/60">Your visit for Thu 7 Aug has been confirmed — 09:00</p>
+                </div>
+              </div>
+            </div>
+            <div className="p-5">
+              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Your updates</p>
+              {[
+                { label: "Quote #Q-2291 sent", sub: "Office deep clean — awaiting your review", icon: <FileText size={14} className="text-[#1E3A5F]" />, bg: "bg-[#1E3A5F]/8" },
+                { label: "Invoice #INV-1084 paid", sub: "£420.00 · Thanks for your payment", icon: <CheckCircle size={14} className="text-emerald-600" />, bg: "bg-emerald-100" },
+                { label: "Booking starting soon", sub: "Reception refresh — today at 14:00", icon: <Clock size={14} className="text-[#1E3A5F]" />, bg: "bg-[#1E3A5F]/8" },
+              ].map((n) => (
+                <div key={n.label} className="flex items-center gap-3 py-2.5 border-b border-slate-100 last:border-0">
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${n.bg}`}>{n.icon}</div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-slate-800 truncate">{n.label}</p>
+                    <p className="text-xs text-slate-400 truncate">{n.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Security / trust ─────────────────────────────────────────────────────────
 
 function SecuritySection() {
@@ -628,6 +706,7 @@ export default function Home() {
       <HowItWorksSection />
       <ForManagersSection />
       <ForWorkersSection />
+      <ForClientsSection />
       <SecuritySection />
       <CTASection />
     </>
