@@ -58,7 +58,7 @@ export default function PrivacyPage() {
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
           <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-          <p className="text-white/45">Last updated: 29 October 2026</p>
+          <p className="text-white/45">Last updated: 2 November 2026</p>
         </div>
       </section>
 
@@ -89,7 +89,8 @@ export default function PrivacyPage() {
               </P>
               <P>
                 This Privacy Policy explains what personal data OnClockly collects, why we collect it, how we use it and your rights in relation to
-                it. It applies to all users of the OnClockly platform — including managers, administrators and workers.
+                it. It applies to all users of the OnClockly platform — including managers, administrators, workers, and clients using the OnClockly
+                Connect client portal.
               </P>
               <P>
                 By using OnClockly you agree to the collection and use of your data as described in this policy. If you do not agree, please do not
@@ -116,6 +117,21 @@ export default function PrivacyPage() {
                   "Jobs you are assigned to",
                   "GPS location at the moment of clock-in and clock-out (not continuously tracked)",
                   "Hours worked and timesheet data",
+                ]}
+              />
+              <p className="text-sm font-semibold text-slate-800 mb-2">Client portal information</p>
+              <UL
+                items={[
+                  "Name, email address and phone number, for client-portal user accounts",
+                  "The client organisation you're associated with, and your role within it (e.g. owner, billing contact)",
+                  "Booking requests, reschedule/cancellation requests, quotes and invoices, and related correspondence",
+                ]}
+              />
+              <p className="text-sm font-semibold text-slate-800 mb-2">Push notifications</p>
+              <UL
+                items={[
+                  "A device push token, used to deliver notifications about job assignments, bookings, quotes and invoices to the OnClockly mobile apps",
+                  "This token is linked to your account and removed when you sign out or disable notifications",
                 ]}
               />
               <p className="text-sm font-semibold text-slate-800 mb-2">Usage data</p>
@@ -165,7 +181,8 @@ export default function PrivacyPage() {
                   "Assign you to jobs and shifts (workers) or allow you to create and manage them (managers)",
                   "Record your attendance — clock-in and clock-out times — and generate accurate timesheets",
                   "Verify that you are at the correct site location at the point of clock-in",
-                  "Send notifications about job assignments, shift changes or timesheet approvals",
+                  "Send push and in-app notifications about job assignments, shift changes, timesheet approvals, bookings, quotes and invoices",
+                  "Enable clients to request bookings, review and respond to quotes, and view or pay invoices through the client portal",
                   "Generate reports for managers and payroll processing",
                   "Maintain the security and integrity of the platform",
                   "Respond to support enquiries",
@@ -181,6 +198,7 @@ export default function PrivacyPage() {
                 items={[
                   "With your company's managers and administrators — for the purpose of scheduling, attendance verification and payroll.",
                   "With infrastructure providers (e.g. hosting, database) under strict data processing agreements.",
+                  "With push notification providers (Expo and Google Firebase Cloud Messaging) — solely to deliver notifications to your device. They receive your device's push token and the notification text, not your wider account data.",
                   "With law enforcement or regulatory authorities where required by applicable law.",
                   "In the event of a business sale or merger — you will be notified before any transfer occurs.",
                 ]}
@@ -203,6 +221,10 @@ export default function PrivacyPage() {
               <P>
                 <strong className="text-slate-800">Company admins/owners</strong> wanting their company&apos;s account and data deleted should
                 email us at info@onclockly.com.
+              </P>
+              <P>
+                <strong className="text-slate-800">Clients</strong> using the client portal wanting their account and data deleted should email
+                us at privacy@onclockly.com.
               </P>
             </DocSection>
 
