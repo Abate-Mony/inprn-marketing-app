@@ -5,6 +5,7 @@ import { Smartphone, X } from "lucide-react";
 import { ANDROID_APP_URL, IOS_APP_URL } from "@/lib/appUrls";
 
 const DISMISS_KEY = "onclockly-app-banner-dismissed";
+const DISMISS_TTL_MS = 14 * 24 * 60 * 60 * 1000; // 14 days
 
 type Platform = "ios" | "android" | null;
 
@@ -14,8 +15,13 @@ function subscribe() {
   return () => {};
 }
 
+function isDismissed(): boolean {
+  const dismissedAt = Number(window.localStorage.getItem(DISMISS_KEY));
+  return Number.isFinite(dismissedAt) && dismissedAt > 0 && Date.now() - dismissedAt < DISMISS_TTL_MS;
+}
+
 function getSnapshot(): Platform {
-  if (window.localStorage.getItem(DISMISS_KEY) === "1") return null;
+  if (isDismissed()) return null;
   const ua = window.navigator.userAgent;
   if (/iPad|iPhone|iPod/.test(ua)) return "ios";
   if (/Android/.test(ua)) return "android";
@@ -37,7 +43,7 @@ export function AppBanner() {
   const storeName = platform === "ios" ? "the App Store" : "Google Play";
 
   const dismiss = () => {
-    window.localStorage.setItem(DISMISS_KEY, "1");
+    window.localStorage.setItem(DISMISS_KEY, String(Date.now()));
     setDismissed(true);
   };
 
