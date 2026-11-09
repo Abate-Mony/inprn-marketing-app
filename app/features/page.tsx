@@ -15,35 +15,13 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { SIGNUP_URL } from "@/lib/appUrls";
+import { PageHero } from "@/components/marketing/PageHero";
 
 export const metadata: Metadata = {
   title: "Features",
   description:
     "A complete toolkit for workforce operations — scheduling, geofenced attendance tracking, recurring jobs, client invoicing, team management and reporting.",
 };
-
-function PageHero() {
-  return (
-    <section className="pt-32 pb-20 bg-[#080F1C]">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-5">Platform features</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-          A complete toolkit for workforce operations
-        </h1>
-        <p className="text-lg text-white/45 mb-10 leading-relaxed max-w-xl mx-auto">
-          OnClockly covers every step from scheduling a shift to invoicing the client — scheduling, attendance, timesheets, billing and reporting in
-          one place.
-        </p>
-        <a
-          href={SIGNUP_URL}
-          className="h-11 px-7 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center gap-2"
-        >
-          Get started free <ArrowRight size={15} />
-        </a>
-      </div>
-    </section>
-  );
-}
 
 const featureSections = [
   {
@@ -342,19 +320,31 @@ function FeatureVisual({ title }: { title: string }) {
 export default function FeaturesPage() {
   return (
     <>
-      <PageHero />
+      <PageHero
+        eyebrow="Platform features"
+        title="A complete toolkit for workforce operations"
+        description="OnClockly covers every step from scheduling a shift to invoicing the client — scheduling, attendance, timesheets, billing and reporting in one place."
+        cta={
+          <a
+            href={SIGNUP_URL}
+            className="h-11 px-7 rounded-full bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center gap-2"
+          >
+            Get started free <ArrowRight size={15} />
+          </a>
+        }
+      />
 
       {/* Feature sections */}
-      <div className="divide-y divide-slate-100">
+      <div className="divide-y divide-slate-200">
         {featureSections.map((f, i) => (
-          <section key={f.title} className={`py-20 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+          <section key={f.title} className={`py-20 ${i % 2 === 0 ? "bg-white" : "bg-[#F7F6F3]"}`}>
             <div className="max-w-7xl mx-auto px-6">
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${f.flip ? "lg:flex-row-reverse" : ""}`}>
                 {/* Copy side */}
                 <div className={f.flip ? "lg:order-2" : ""}>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1E3A5F]/8 mb-5">
+                  <div className="flex items-center gap-2 mb-5">
                     <span className="text-[#1E3A5F]">{f.icon}</span>
-                    <span className="text-xs font-semibold text-[#1E3A5F]">{f.badge}</span>
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#1E3A5F]">{f.badge}</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight leading-tight mb-4">{f.headline}</h2>
                   <p className="text-slate-500 leading-relaxed mb-7">{f.desc}</p>
@@ -370,7 +360,7 @@ export default function FeaturesPage() {
 
                 {/* Visual side */}
                 <div className={f.flip ? "lg:order-1" : ""}>
-                  <div className={`rounded-2xl border border-slate-200 p-7 shadow-sm ${i % 2 === 0 ? "bg-slate-50" : "bg-white"}`} aria-hidden="true">
+                  <div className="rounded-2xl border border-slate-200 bg-white p-7" aria-hidden="true">
                     <div className="w-10 h-10 rounded-xl bg-[#1E3A5F]/8 flex items-center justify-center text-[#1E3A5F] mb-5">{f.icon}</div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-5">{f.badge}</p>
                     <FeatureVisual title={f.title} />
@@ -383,12 +373,12 @@ export default function FeaturesPage() {
       </div>
 
       {/* Extra features */}
-      <section className="py-20 bg-white border-t border-slate-100">
+      <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-10 text-center">Also included</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-10">Also included</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {extras.map((e) => (
-              <div key={e.title} className="p-5 rounded-2xl border border-slate-200 bg-slate-50">
+              <div key={e.title} className="p-5 rounded-2xl border border-slate-200">
                 <div className="w-9 h-9 rounded-xl bg-[#1E3A5F]/8 flex items-center justify-center text-[#1E3A5F] mb-4">{e.icon}</div>
                 <h3 className="text-sm font-bold text-slate-900 mb-1.5">{e.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{e.desc}</p>
@@ -399,13 +389,15 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#080F1C] text-center">
-        <div className="max-w-xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-4">Start free, upgrade when you need to</h2>
-          <p className="text-white/45 mb-8">Starter is free for teams of up to 5 workers. Get started today and see what OnClockly can do for your team.</p>
+      <section className="py-20 bg-[#080F1C]">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Start free, upgrade when you need to</h2>
+            <p className="text-white/45 max-w-md">Starter is free for teams of up to 5 workers. Get started today and see what OnClockly can do for your team.</p>
+          </div>
           <a
             href={SIGNUP_URL}
-            className="h-11 px-7 rounded-xl bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center"
+            className="h-11 px-7 rounded-full bg-white text-[#0B1628] text-sm font-bold hover:bg-white/90 transition-all inline-flex items-center shrink-0"
           >
             Create your free account
           </a>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageHero } from "@/components/marketing/PageHero";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -33,13 +34,7 @@ const SECTIONS = [
 export default function TermsPage() {
   return (
     <>
-      <section className="pt-28 pb-12 bg-[#080F1C]">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
-          <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-          <p className="text-white/45">Last updated: 29 October 2026</p>
-        </div>
-      </section>
+      <PageHero eyebrow="Legal" title="Terms of Service" description="Last updated: 29 October 2026" />
 
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">

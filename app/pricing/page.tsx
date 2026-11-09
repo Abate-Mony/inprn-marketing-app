@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PricingPlans } from "@/components/marketing/PricingPlans";
+import { PageHero } from "@/components/marketing/PageHero";
 import { getPlanCatalog } from "@/lib/api";
 
 export const metadata: Metadata = {
@@ -36,16 +37,11 @@ export default async function PricingPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-[#080F1C]">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-5">Pricing</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">Simple, transparent pricing</h1>
-          <p className="text-lg text-white/45 leading-relaxed">
-            Start free. Upgrade as your team grows. No hidden fees, no long-term contracts.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Pricing"
+        title="Simple, transparent pricing"
+        description="Start free. Upgrade as your team grows. No hidden fees, no long-term contracts."
+      />
 
       {/* Plans */}
       <section className="py-20 bg-white">
@@ -55,13 +51,15 @@ export default async function PricingPage() {
       </section>
 
       {/* Talk to us */}
-      <section className="py-16 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-xl mx-auto px-6 text-center">
-          <h2 className="text-xl font-bold text-slate-900 mb-3">Not sure which plan fits your team?</h2>
-          <p className="text-slate-500 mb-6">Tell us about your operation and we&apos;ll help you pick the right plan.</p>
+      <section className="py-16 bg-[#F7F6F3] border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900 mb-2">Not sure which plan fits your team?</h2>
+            <p className="text-slate-500">Tell us about your operation and we&apos;ll help you pick the right plan.</p>
+          </div>
           <Link
             href="/contact"
-            className="inline-flex items-center h-11 px-6 rounded-xl bg-[#1E3A5F] text-white text-sm font-semibold hover:bg-[#162D4A] transition-all"
+            className="inline-flex items-center h-11 px-6 rounded-full bg-[#1E3A5F] text-white text-sm font-semibold hover:bg-[#162D4A] transition-all shrink-0"
           >
             Talk to us
           </Link>
@@ -70,11 +68,11 @@ export default async function PricingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-white">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-10 text-center">Common questions</h2>
-          <div className="flex flex-col gap-6">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-bold text-slate-900 mb-10">Common questions</h2>
+          <div className="flex flex-col border-t border-slate-200">
             {faqs.map((item) => (
-              <div key={item.q} className="border-b border-slate-100 pb-6 last:border-0">
+              <div key={item.q} className="py-6 border-b border-slate-200 max-w-2xl">
                 <p className="text-base font-semibold text-slate-900 mb-2">{item.q}</p>
                 <p className="text-sm text-slate-500 leading-relaxed">{item.a}</p>
               </div>

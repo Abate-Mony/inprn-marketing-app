@@ -50,7 +50,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-slate-50 rounded-2xl border border-slate-200 p-7">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-[#F7F6F3] rounded-2xl border border-slate-200 p-7">
       <h2 className="text-lg font-bold text-slate-900">Send us a message</h2>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">

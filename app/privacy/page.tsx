@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageHero } from "@/components/marketing/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -53,14 +54,7 @@ function UL({ items }: { items: string[] }) {
 export default function PrivacyPage() {
   return (
     <>
-      {/* Header */}
-      <section className="pt-28 pb-12 bg-[#080F1C]">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Legal</p>
-          <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-          <p className="text-white/45">Last updated: 2 November 2026</p>
-        </div>
-      </section>
+      <PageHero eyebrow="Legal" title="Privacy Policy" description="Last updated: 2 November 2026" />
 
       {/* Body */}
       <div className="max-w-7xl mx-auto px-6 py-16">
