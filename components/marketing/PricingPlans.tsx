@@ -73,7 +73,7 @@ export function PricingPlans({ plans }: PricingPlansProps) {
           const price = getPrice(plan, billing);
           const href = planHref(plan);
           const isExternal = href.startsWith("http");
-          const ctaClass = `w-full h-11 rounded-xl text-sm font-semibold transition-all inline-flex items-center justify-center ${
+          const ctaClass = `w-full h-11 rounded-full text-sm font-semibold transition-all inline-flex items-center justify-center ${
             plan.highlighted ? "bg-white text-[#1E3A5F] hover:bg-white/90" : "border border-slate-200 text-slate-700 hover:bg-slate-50"
           }`;
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PageHero } from "./PageHero";
 
 // ─── Content ────────────────────────────────────────────────────────────────
 // Mirrors time_sheet_server/EXTERNAL_API.md — keep both in sync when the API
@@ -152,17 +153,11 @@ export function ApiDocs() {
 
   return (
     <>
-      {/* Title band */}
-      <section className="pt-28 pb-12 bg-[#080F1C]">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#60A5FA] mb-4">Developer docs</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-4">External API</h1>
-          <p className="text-white/45 leading-relaxed max-w-xl mx-auto">
-            Connect your own systems — a booking website, a Zapier flow, an internal tool — to your OnClockly schedule.
-            Authenticated by an API key, scoped to your company automatically.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Developer docs"
+        title="External API"
+        description="Connect your own systems — a booking website, a Zapier flow, an internal tool — to your OnClockly schedule. Authenticated by an API key, scoped to your company automatically."
+      />
 
       <div className="bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-6">

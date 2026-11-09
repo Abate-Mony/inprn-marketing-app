@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { AppBanner } from "./AppBanner";
 import { LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
 
 const links = [
@@ -37,6 +38,7 @@ export function MarketingHeader() {
         isHero ? "bg-transparent" : "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm"
       }`}
     >
+      <AppBanner />
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[66px]">
         <Link href="/" aria-label="OnClockly home">
           <Logo light={isHero} />
