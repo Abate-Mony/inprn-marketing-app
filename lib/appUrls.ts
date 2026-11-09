@@ -5,3 +5,9 @@ export const SITE_URL = "https://onclockly.com";
 export const APP_URL = "https://app.onclockly.com/";
 export const LOGIN_URL = "https://app.onclockly.com/auth";
 export const SIGNUP_URL = "https://app.onclockly.com/auth/signup";
+
+// Worker mobile app (timeshift-mobile) store listings.
+export const IOS_APP_URL = "https://apps.apple.com/app/onclockly/id6817540475";
+// Android is still in closed testing — not public yet. Fill in once it's
+// promoted to production (Play Console > your app > Production).
+export const ANDROID_APP_URL: string | null = null;

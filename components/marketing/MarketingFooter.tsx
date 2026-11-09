@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { Apple } from "lucide-react";
 import { Logo } from "./Logo";
-import { LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
+import { IOS_APP_URL, LOGIN_URL, SIGNUP_URL } from "@/lib/appUrls";
 
 const columns = [
   {
@@ -44,6 +45,20 @@ export function MarketingFooter() {
               Workforce management, timesheets and client invoicing for security, cleaning, events and other shift-based operational teams.
             </p>
             <p className="text-xs text-white/25 mt-6">© 2026 OnClockly. All rights reserved.</p>
+            {/* Android is still in closed testing (not public yet) — see
+                lib/appUrls.ts's ANDROID_APP_URL, add its badge once promoted. */}
+            <a
+              href={IOS_APP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-6 h-11 px-4 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <Apple size={22} className="text-white shrink-0" />
+              <span className="flex flex-col leading-none">
+                <span className="text-[9px] text-white/50">Download on the</span>
+                <span className="text-sm font-semibold text-white">App Store</span>
+              </span>
+            </a>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
